@@ -9,8 +9,8 @@ const priceController = require('../controllers/priceController');
 const validation = require('../helpers/validation');
 const { authUser, authAdmin } = require('../middlewares/auth');
 
-router.get('/user', adminController.getAllUsers);
-router.get('/user-id', adminController.getUser);
+router.get('/user', authAdmin, adminController.getAllUsers);
+router.get('/user-id', authAdmin, adminController.getUser);
 
 // route for vehicle brand
 router.post('/brand', authAdmin, brandController.createBrand);

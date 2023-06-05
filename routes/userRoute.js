@@ -17,24 +17,24 @@ router.post('/login', validation(loginValidator), userController.loginUser);
 router.delete('/delete/user/:id', authUser, userController.deleteUser);
 
 // get method for brand controller
-router.get('/brand', brandController.getAllBrands);
-router.get('/brand-id', brandController.getBrand);
+router.get('/brand', authUser, brandController.getAllBrands);
+router.get('/brand-id', authUser, brandController.getBrand);
 
 // get method for brand controller
-router.get('/type', typeController.getAllTypes);
-router.get('/type-id', typeController.getType);
+router.get('/type', authUser, typeController.getAllTypes);
+router.get('/type-id', authUser, typeController.getType);
 
 // get method for brand controller
-router.get('/model', modelController.getAllModels);
-router.get('/model-id', modelController.getModel);
+router.get('/model', authUser, modelController.getAllModels);
+router.get('/model-id', authUser, modelController.getModel);
 
 // get method for brand controller
-router.get('/price', priceController.getAllPrices);
-router.get('/price-id', priceController.getPrice);
+router.get('/price', authUser, priceController.getAllPrices);
+router.get('/price-id', authUser, priceController.getPrice);
 
 // get method for brand controller
-router.get('/year', yearController.getAllYears);
-router.get('/year-id', yearController.getYear);
+router.get('/year', authUser, yearController.getAllYears);
+router.get('/year-id', authUser, yearController.getYear);
 
 
 
