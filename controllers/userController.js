@@ -61,7 +61,7 @@ class UserController {
   static async deleteUser(req, res, next) {
     try {
         // extract data from req.params
-        const id = req.params.id;
+        const id = req.query.id;
         const searchUser = await Users.findOne({
           where: { id: id },
         });

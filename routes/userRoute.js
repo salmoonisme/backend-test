@@ -14,7 +14,7 @@ const { authUser, authAdmin } = require('../middlewares/auth');
 // registration and login route
 router.post('/register', validation(registerValidator), userController.registerUser);
 router.post('/login', validation(loginValidator), userController.loginUser);
-router.delete('/delete/user/:id', authUser, userController.deleteUser);
+router.delete('/user-id', authUser, userController.deleteUser);
 
 // get method for brand controller
 router.get('/brand', authUser, brandController.getAllBrands);

@@ -10,6 +10,7 @@
     "dev": "nodemon app.js",
     "db:migrate": "cd db/ && sequelize db:migrate",
     "db:create": "cd db/ && sequelize db:create",
+    "db:seed": "cd db/ && sequelize db:seed:all",
     "db:create:prod": "cd db/ && NODE_ENV=production sequelize db:create",
     "db:migrate:prod": "cd db/ && NODE_ENV=production sequelize db:migrate",
     "db:seed:prod": "cd db/ && NODE_ENV=production sequelize db:seed:all"
