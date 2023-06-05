@@ -1,0 +1,1072 @@
+{
+	"info": {
+		"_postman_id": "ba3112e7-afd5-42d2-86db-fdbdf396278d",
+		"name": "vehicle_server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25519530"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/user?page=0&size=0",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/user-id?id=1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"user-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"binjay@gmail.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/register",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"userbiasa@email.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/login",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/user-id?id=1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"user-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle brand",
+			"item": [
+				{
+					"name": "get all brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/brand?page=1&size=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"brand"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get brand by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/brand-id?id=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"brand-id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"BMW\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/brand",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update brand",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Toyotoo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/brand/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"brand",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete brand",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/brand/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"brand",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle type",
+			"item": [
+				{
+					"name": "get all types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/type?page=1&size=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"type"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get type by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/type-id?id=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"type-id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyYmlhc2FAZW1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY4NTc3NTM4NX0.w2GyKsDLM_NE1vAq8JSE-6XwJ4t-6jeT7KF-svnm_hY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brandID\": 1,\n    \"name\": \"SUV\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/type",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update type",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"SAV\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/type/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/type/4",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"type",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle model",
+			"item": [
+				{
+					"name": "get all models",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/model?page=0&size=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"model"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get model by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/model-id?id=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"model-id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post model",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"typeID\": 1,\n    \"name\": \"Fortuner\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/model",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update model",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Zenix\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/model/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"model",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete model",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/model/4",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"model",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "year",
+			"item": [
+				{
+					"name": "get all years",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/year?page=1&size=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"year"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get year by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/year-id?id=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"year-id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post year",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"year\": \"2020\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/year",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"year"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update year",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"year\": \"2016\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/year/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"year",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete year",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/year/5",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"year",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pricelist",
+			"item": [
+				{
+					"name": "get all pricelists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/price?page=1&size=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"price"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get pricelist by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/price-id?id=2",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"price-id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post pricelist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"yearID\": 1,\n    \"modelID\": 1,\n    \"price_inMillion\": \"599\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/pricelist",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"pricelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update pricelist",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price_inMillion\": 229\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/pricelist/1",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"pricelist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete pricelist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbmJpYXNhQGVtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTc3NTE5NX0.Rrn2XDvUzzt6MKwfXn63QrSCeawKXx1FrUEldPdMX_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://104.248.147.63:4119/api/pricelist/5",
+							"protocol": "http",
+							"host": [
+								"104",
+								"248",
+								"147",
+								"63"
+							],
+							"port": "4119",
+							"path": [
+								"api",
+								"pricelist",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

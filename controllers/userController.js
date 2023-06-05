@@ -26,7 +26,6 @@ class UserController {
       });
       return new Response(res, 201, {
         email: email,
-  
       });
     } catch (error) {
       next(error);
