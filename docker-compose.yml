@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  vehicle_app_project:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 4119:4119
+    depends_on:
+      - vehicle_db
+      - vehicle_db_migration
+    env_file:
+      - .env.production
+    command: sh -c "npm run start"
+    volumes:
+      - type: volume
+        source: vehicle_module_volume
+        target: /app/node_modules
+      - type: bind
+        source: .
+        target: /app
+
+  vehicle_db_migration:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - vehicle_db
+    env_file:
+      - .env.production
+    command: sh -c "npm run db:migrate:prod && npm run db:seed:prod"
+    restart: on-failure
+
+  vehicle_db:
+    image: postgres:14
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=vehicle_app
+
+volumes:
+  vehicle_module_volume:
